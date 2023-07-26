@@ -1,0 +1,11 @@
+---
+
+- name: cisco change hostname
+  hosts: switches
+  gather_facts: false
+
+- name: Apply the provided configuration
+  cisco.ios.ios_hostname:
+    config:
+      hostname: coreswitch
+    state: merged
