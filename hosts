@@ -1,8 +1,0 @@
-[network]
-10.235.63.3
-
-[network:vars]
-ansible_network_os=ios
-ansible_user=admin
-ansible_password=Cnmm2Cnmm2
-ansible_connection=network_cli

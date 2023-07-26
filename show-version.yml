@@ -1,15 +1,15 @@
 ---
 
 - name: cisco show version
-  hosts: network
+  hosts: switches
   gather_facts: false
 
   tasks:
       - name: show version
         ios_command:
-              commands: show version
-         register: output
+            commands: show version
+        register: output
 
-       - name: print output
-         debug:
-             var: output.stdout_lines
+      - name: print output
+        debug:
+            var: output.stdout_lines
