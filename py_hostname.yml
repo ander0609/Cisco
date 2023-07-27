@@ -1,0 +1,12 @@
+---
+
+- name: cisco change interface
+  hosts: switches
+  gather_facts: false
+
+  tasks: 
+    - name: Apply the provided configuration
+      cisco.ios.ios_hostname:
+        config:
+          hostname: CHNx-LAB888-A01
+        state: merged
